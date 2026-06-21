@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "surface-container-lowest": "#1a0908",
+                    "secondary-container": "#474746",
+                    "primary-fixed-dim": "#ffb4aa",
+                    "primary": "#ffb4aa",
+                    "on-secondary-container": "#b7b5b4",
+                    "on-secondary-fixed": "#1b1b1c",
+                    "error": "#ffb4ab",
+                    "on-surface-variant": "#e9bcb6",
+                    "secondary": "#c8c6c5",
+                    "tertiary-container": "#717373",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#200e0c",
+                    "on-primary": "#690003",
+                    "background": "#200e0c",
+                    "surface-container-highest": "#462f2c",
+                    "on-primary-fixed-variant": "#930007",
+                    "on-primary-container": "#fff7f6",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-surface": "#ffdad5",
+                    "surface-dim": "#200e0c",
+                    "surface-container-low": "#2a1614",
+                    "on-secondary": "#303030",
+                    "primary-fixed": "#ffdad5",
+                    "inverse-on-surface": "#412b28",
+                    "secondary-fixed": "#e5e2e1",
+                    "outline-variant": "#5e3f3b",
+                    "inverse-surface": "#ffdad5",
+                    "primary-container": "#e50914",
+                    "on-background": "#ffdad5",
+                    "on-secondary-fixed-variant": "#474746",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-error": "#690005",
+                    "surface-tint": "#ffb4aa",
+                    "surface-bright": "#4a3330",
+                    "on-tertiary-container": "#f9f9f9",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-primary-fixed": "#410001",
+                    "surface-container-high": "#3a2522",
+                    "on-tertiary": "#2f3131",
+                    "tertiary": "#c6c6c7",
+                    "inverse-primary": "#c0000c",
+                    "outline": "#af8782",
+                    "surface-variant": "#462f2c",
+                    "surface-container": "#2e1a18",
+                    "on-tertiary-fixed": "#1a1c1c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "64px",
+                    "md": "24px",
+                    "xs": "8px",
+                    "edge_margin": "24px",
+                    "unit": "4px",
+                    "lg": "40px",
+                    "sm": "16px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-xl": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-xl": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0A0A0A; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-card { background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+<style>
+    body {
+      min-height: 100dvh;
+    }
+  </style>
+</head>
+<body class="font-body-md text-on-surface antialiased bg-[#0A0A0A]">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 bg-transparent backdrop-blur-md z-50">
+<div class="flex items-center gap-4">
+<button class="text-white hover:scale-110 transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<span class="text-2xl font-black text-red-600 uppercase tracking-tighter">NotFlix</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-white hover:scale-110 transition-transform duration-200 active:scale-95">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="w-8 h-8 rounded-full overflow-hidden border border-white/20 hover:scale-110 transition-transform duration-200">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVcarYfZlPiao6I9OJqMwLkRsDMA_7SiGmpceY76DncPlja6KsMAoLjShYG1Jpb0Yh5ymKD-hl0qsvR80U3VtzIVoAMaqGlAL_8yBNHlcOOyjmTFZH8U1lTRL0SZLaDBOlNa5wPGk0_c0I-YqS01Iu4J1-9n-LfOYBhkB3iCmdoLrRGdMZuNGkyMLMo-lTadsR-oak7Lh-RvgY9I1RPDAysHkLtGfs1sgINCpRZGucW8USpk-8UBZj6uMRvlKlza25ZZr1FIJW-lNT"/>
+</button>
+</div>
+</header>
+<main class="pb-24">
+<!-- Hero Section -->
+<section class="relative min-h-[750px] w-full flex items-end">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover" data-alt="cinematic widescreen shot of a futuristic cyberpunk city" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvR3OitaH6--4T6KQcWA0KHniGWjtyCuILgQ6Q9qj9xz0jciACFhCEYO5FKVxcKbLey6597lYfKYqshmfnVNmS9StUV7fYU9rFngab7FWecYiNHyK6GjlaqDjLvIHJhx9msN16eOY3wn6u9qmDHdDXYowKaS0eBG9tlyJAPSIWsc8WMMQblucx4SCg5jhaKLXU8Rtr_QZT53jg6QTbHm4jx7_gBp5-7H8N5rihtiTysWDWLdBlRwi2faVSvp2hlfnKjAw944PzbUj9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/80 via-transparent to-transparent"></div>
+</div>
+<!-- Content Overlay -->
+<div class="relative w-full px-edge_margin pb-xl flex flex-col gap-sm">
+<h1 class="font-display-xl text-display-xl text-white tracking-tighter max-w-[80%] leading-none mb-2">THE NEON EDGE</h1>
+<div class="flex items-center gap-4 text-white/70 font-label-sm uppercase tracking-wider mb-4">
+<span>2024</span>
+<span class="px-2 py-0.5 bg-white/10 rounded-sm text-[10px] font-bold border border-white/20">18+</span>
+<span>2h 15m</span>
+<span class="text-white/40">•</span>
+<span>Sci-Fi / Thriller</span>
+</div>
+<p class="font-body-lg text-body-lg text-white/80 leading-relaxed max-w-2xl mb-8 line-clamp-4">
+                    In a future where memories are harvested as digital currency, a rogue data-broker uncovers a conspiracy that threatens to erase the identity of an entire civilization. Navigating the rain-slicked streets of a vertical megalopolis, she must protect the last remaining fragments of human history.
+                </p>
+<div class="flex items-center gap-sm mt-4">
+<button class="flex-1 max-w-[180px] flex items-center justify-center gap-2 bg-primary-container text-white h-12 rounded-lg font-semibold hover:scale-105 transition-transform shadow-[0_0_20px_rgba(229,9,20,0.4)]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Watch Now
+                    </button>
+<button class="flex-1 max-w-[180px] flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white h-12 rounded-lg font-semibold hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined">add</span>
+                        Add to List
+                    </button><button class="flex-1 max-w-[180px] flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white h-12 rounded-lg font-semibold hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined">download</span>
+                        Download
+                    </button>
+</div>
+</div>
+</section>
+<!-- Movie Details -->
+<div class="px-edge_margin space-y-xl mt-xl">
+<!-- Genres -->
+<section>
+<h2 class="font-headline-md text-headline-md text-white mb-sm">Genres</h2>
+<div class="flex flex-wrap gap-xs">
+<span class="px-md py-2 bg-surface-container-highest text-on-surface rounded-full font-label-sm border border-white/5">Futuristic</span>
+<span class="px-md py-2 bg-surface-container-highest text-on-surface rounded-full font-label-sm border border-white/5">Cyberpunk</span>
+<span class="px-md py-2 bg-surface-container-highest text-on-surface rounded-full font-label-sm border border-white/5">Suspense</span>
+<span class="px-md py-2 bg-surface-container-highest text-on-surface rounded-full font-label-sm border border-white/5">Dystopian</span>
+</div>
+</section>
+<!-- Cast -->
+<section>
+<h2 class="font-headline-md text-headline-md text-white mb-sm">Cast</h2>
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar py-2">
+<div class="flex-none w-28 flex flex-col items-center gap-xs">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="headshot of Elena Vance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd7lmjuAaRc_N57wfeV1ggEf7y44mj1xQo2sEqwDNuVoVAKSvWDodOcgf8QUYraFSONwukz2F49MUDCkMZQlpdLOeDM8FsH9WmHdjsLlEWGYchzE88kX-HK7Zb-VmXdHLS0n1rTl0zOQoRYqhVp5ucY5EGnQcGeHlVJtgAY-WeoOnEbdxYmqHtDlr-GF0xl4iIdFhC1PSEgzcRzNQKvjBaoFLIYk3CDTyBddn3bUgWAthj_85GL7J3F34o9EgXsmXjxIsW2YKglcES"/>
+</div>
+<span class="font-label-sm text-center text-white mt-1">Elena Vance</span>
+<span class="text-[10px] uppercase text-white/40 tracking-tighter">as Kael</span>
+</div>
+<div class="flex-none w-28 flex flex-col items-center gap-xs">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="headshot of Marcus Thorne" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0WroWjO7dSV6si-QY8DofaRCusWiDQXaAPxlop4lpnfuRT8fsAT7yT_QOdyo5m19eYHsdUthAeRr5LhesT-e5m8mQW06MEcfQg8tdrybX8bk4mQWgcuEDQCcq03M7GjJaLslDAcEHXGdKkgLfNVvjVDcXWaxtCpQFHaakw-voDDwC2k6R3chyxey4KdJfOA3io1CnMyY6IF7zDvYR8Cxp_5KcrLLRLwxOa9_Wma0SviFaKr8gEuvci66zDJZYkbOjteUVkTrNcbjU"/>
+</div>
+<span class="font-label-sm text-center text-white mt-1">Marcus Thorne</span>
+<span class="text-[10px] uppercase text-white/40 tracking-tighter">as The Broker</span>
+</div>
+<div class="flex-none w-28 flex flex-col items-center gap-xs">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="portrait of Sarah Chen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmW2U8W9j8qxVkTXJcO3oHm1s34JTUKsVc5uaoS2wJ3BQU1ytxRrKBRlDXFXdt8m1v4I5r5dxV-rss3tNARytfguiMWPvJ9Gs6LBjgsiFcC9XgbNOTv_Gt4BbndpBuusOlhVGF0ygQa7InNja2g6Hc7rvvBYvBsYGfVM2BxRRlnHQMYfQHWU5wLz3pfPDQ4v7evf5q7z26g1pPEvSFhErLoIaeSuFtfQ8izgIjTvfXVzyiUVKaPExVps0xEVcXSwHWGFzDjTXHMVud"/>
+</div>
+<span class="font-label-sm text-center text-white mt-1">Sarah Chen</span>
+<span class="text-[10px] uppercase text-white/40 tracking-tighter">as Dr. Sora</span>
+</div>
+<div class="flex-none w-28 flex flex-col items-center gap-xs">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="dramatic headshot of Julian Cross" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDorypfQueNT1cTE9E9OkTCpel9VJTC37rzfm4siR9_k79E6yJrpQF7TyjBtQ7zWoxUCFIx0By1LAOElXRWCM7rhfiM3m5rTTJQB2gE1q6hfcgq7I8C34D5Dxd19xHrnj5lrFEkm-eoJzbimV_vS7-GVdH1maZo5q7Bdkt7U7PRckkqi_hsm-4GxkmWiOVEPMrcjUiK2erVkCDuWezwOYI2Gdw5QrQDo_UmnlEbxZ6fygg8jdcNKX04EWrlMCAm3L0jI-4DkZbvSRrU"/>
+</div>
+<span class="font-label-sm text-center text-white mt-1">Julian Cross</span>
+<span class="text-[10px] uppercase text-white/40 tracking-tighter">as Silas</span>
+</div>
+<div class="flex-none w-28 flex flex-col items-center gap-xs">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="headshot of Leo Rivera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLFmBVYxziSjkFj99GTUh9Y5cE4-1u81Aitxn8bDsCk223DbD1R2iVOw8sbEcsWEOTojy20sdl7V_7DBdq4yRSGK9ZtxIQrOwN8MvI2l6mFrfhCYWWvQhnSjDGVpCRZVEMbMaibLUvyOfnRBy3vzSOAVRAeBdr5fJMDUPpFs5wRijLAcgZbpC3DQvgD5UqHPi4GWiWaS83k7L1zBusKPWn91dnge2bg7L-5c0Q-73qqAL5WMIxOdCCx3g97jjr6WbC-7o_tO0ifK1V"/>
+</div>
+<span class="font-label-sm text-center text-white mt-1">Leo Rivera</span>
+<span class="text-[10px] uppercase text-white/40 tracking-tighter">as Jax</span>
+</div>
+</div>
+</section>
+<!-- Recommended -->
+<section>
+<div class="flex justify-between items-center mb-sm">
+<h2 class="font-headline-md text-headline-md text-white">Recommended for You</h2>
+<button class="text-red-600 font-label-sm uppercase tracking-widest hover:underline">See All</button>
+</div>
+<div class="flex gap-gutter overflow-x-auto hide-scrollbar pb-lg">
+<!-- Movie Card 1 -->
+<div class="flex-none w-64 group cursor-pointer">
+<div class="relative aspect-[16/9] rounded-xl overflow-hidden mb-xs">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="car chase at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv5QtJXKHisyT1vegCjrofkTz1vm74UrySzflnjAUWBoZ-u6jJVMyNkY4BgiYXfNcpvkzmfY_QmR73GW5RHgkUgIu-SoH7pZq-WWefRdvdMOr1l2Yp4k9dJoN3CHgZKDuJYCSkCqwntl4G0j-I3WJZ_pifKGtcIUnbhDH68orh9Tb9GLKa2Yv8EENkCx8JWfaz-G9byN3a1YcnxGmy3eHgyPJB0tHZJ-gGI5t5uShF-abf8YZILaXHdtYzddzjmmwY9tmB7pc_kHcq"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/60 backdrop-blur-md rounded text-[10px] text-white">4K UHD</div>
+</div>
+<h3 class="font-semibold text-sm text-white group-hover:text-red-600 transition-colors">Shadow Protocol</h3>
+<p class="text-[10px] text-white/40 uppercase tracking-wider">Action • 2023</p>
+</div>
+<!-- Movie Card 2 -->
+<div class="flex-none w-64 group cursor-pointer">
+<div class="relative aspect-[16/9] rounded-xl overflow-hidden mb-xs">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="empty cinema theater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6GWP7mT88QjYzo0s6LBShYg3ZJLBeg0WvgRqXXg3P_FwJnRjo3Zn9w6b2viq7pJLtBvyKFlC5kHvrnFiASOGY562pHoUXj9O7gkBd-dEOrz7Qdhb7wdfcnfHc3-yVR543SFN4lNXgv3ClcM65CpSE6V7wMXPc-cOu2SGuQIqaj-eimAG2szgDUTgt6HIyljXgUqde47TY_yX7NwJaw6eUPuS9LMOByMOLhvIx9ST953VpKTkg4MSa6VO7re4YDGqSXzzERpfSdPTw"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/60 backdrop-blur-md rounded text-[10px] text-white">HD</div>
+</div>
+<h3 class="font-semibold text-sm text-white group-hover:text-red-600 transition-colors">The Last Frame</h3>
+<p class="text-[10px] text-white/40 uppercase tracking-wider">Drama • 2024</p>
+</div>
+<!-- Movie Card 3 -->
+<div class="flex-none w-64 group cursor-pointer">
+<div class="relative aspect-[16/9] rounded-xl overflow-hidden mb-xs">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="deep space nebula" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1E2oh0lxRI1n1i3E841iFoNS5ZTZCx20hpMiCyOKNEIoQM3CCm_8pb4yUGOsYTyVKBzmJF4kddvhgM8tXaNzAMxQ55xIvavq340d8BzVwMpQNDl3oIxpgodKoNwQvnsulk2NuryRoSJeqK577k__cljGCCapI1AEkEyL1gPkvuVWBUeby_I6SZ5r46dnQe_KdI5aCv1zdDwmgfFojAYQwCLsvCUXLaM-k9n8dJNFIuD8GpbTbMjucdqiNuuIjUwnYzsF_2sH-MlKv"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/60 backdrop-blur-md rounded text-[10px] text-white">4K</div>
+</div>
+<h3 class="font-semibold text-sm text-white group-hover:text-red-600 transition-colors">Void Walker</h3>
+<p class="text-[10px] text-white/40 uppercase tracking-wider">Sci-Fi • 2022</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 pb-safe bg-[#0A0A0A]/80 backdrop-blur-xl border-t border-white/10 shadow-[0_-8px_30px_rgb(0,0,0,0.5)]">
+<button class="flex flex-col items-center gap-1 text-white/40 hover:text-white transition-colors active:scale-90">
+<span class="material-symbols-outlined">home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-red-600 scale-110 hover:text-white transition-colors active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/40 hover:text-white transition-colors active:scale-90">
+<span class="material-symbols-outlined">bookmarks</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/40 hover:text-white transition-colors active:scale-90">
+<span class="material-symbols-outlined">person</span>
+</button>
+</nav>
+</body></html>

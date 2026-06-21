@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #0A0A0A;
+            color: #ffdad5;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "on-primary-fixed": "#410001",
+                      "on-background": "#ffdad5",
+                      "on-primary-container": "#fff7f6",
+                      "tertiary-fixed": "#e2e2e2",
+                      "primary-container": "#e50914",
+                      "surface-container-low": "#2a1614",
+                      "surface": "#200e0c",
+                      "surface-dim": "#200e0c",
+                      "secondary": "#c8c6c5",
+                      "primary": "#ffb4aa",
+                      "on-primary-fixed-variant": "#930007",
+                      "background": "#200e0c",
+                      "tertiary": "#c6c6c7",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "error": "#ffb4ab",
+                      "on-tertiary": "#2f3131",
+                      "outline": "#af8782",
+                      "on-secondary-fixed": "#1b1b1c",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface-bright": "#4a3330",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#474746",
+                      "tertiary-container": "#717373",
+                      "surface-container": "#2e1a18",
+                      "on-surface-variant": "#e9bcb6",
+                      "primary-fixed-dim": "#ffb4aa",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-secondary": "#303030",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface-tint": "#ffb4aa",
+                      "on-tertiary-container": "#f9f9f9",
+                      "error-container": "#93000a",
+                      "on-secondary-container": "#b7b5b4",
+                      "surface-container-highest": "#462f2c",
+                      "inverse-surface": "#ffdad5",
+                      "outline-variant": "#5e3f3b",
+                      "on-surface": "#ffdad5",
+                      "on-error": "#690005",
+                      "surface-container-lowest": "#1a0908",
+                      "primary-fixed": "#ffdad5",
+                      "secondary-container": "#474746",
+                      "inverse-on-surface": "#412b28",
+                      "inverse-primary": "#c0000c",
+                      "on-primary": "#690003",
+                      "surface-variant": "#462f2c",
+                      "surface-container-high": "#3a2522"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "16px",
+                      "gutter": "24px",
+                      "xl": "64px",
+                      "lg": "40px",
+                      "md": "24px",
+                      "unit": "4px",
+                      "xs": "8px",
+                      "edge_margin": "48px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Inter"],
+                      "display-xl": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#0A0A0A] text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#0A0A0A]/80 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform text-white/70">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+<div class="text-[#E50914] font-black text-2xl tracking-tighter font-['Inter']">NOTFLIX</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-white/20 active:scale-95 transition-transform cursor-pointer">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a stylish young man with minimalist glasses and a cinematic soft blue backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsOiXHy2u2FANO2OeQGBCfvebLXzBYk__e5MH-8yaUwCnyOarQZu9o_50CNLVK737vEZoy5kXk0DVueW7qeqhOHTdq8Q_EJse78NoDienFLeN_QvHjmRYHJBDEQnelXDUad4t23a0Tvq02J3TWh6qb0BGxLH_Au3CDbMsFnlW7_oRStqc3EurBXmRpYg8ZB56O-9CSovEiI_uAcwZewsRsQxVUfYXvc_PEMKsFoUig0zM_JH90S3iW9d73bGAwfyZ-NsqDhMK8ROKL"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-gutter max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-lg">
+<h1 class="font-headline-lg text-headline-lg text-white mb-xs">My Watchlist</h1>
+<p class="font-body-md text-body-md text-white/50">8 items saved for later</p>
+</section>
+<!-- Watchlist Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Movie Card 1 -->
+<div class="group relative flex flex-col gap-sm">
+<div class="aspect-[2/3] rounded-xl overflow-hidden glass-card relative cursor-pointer active:scale-[0.98] transition-all duration-300">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="cinematic movie poster of a lone astronaut standing on a glowing neon cyberpunk planet surface with massive twin moons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD-W6T5Qv3RICRZV7TzA8vcMf1nahLumNfBXKjQgWLwL2K_mU-DptdoYVYKIIaBqsxptJZOmBw3KCcGW5GATs35NCSLyyuLiww5KuGr-0V65tM3q66sqVHuzHyPG4_quTX36KIjRFwWTA4svrzrKIplcHoc8zC5fxIoHkWaL30wYG70e2R3vrsYtM2ciCUQSkwRZ12DsG6Q2nmadAj2oj5iF-kGoW0fblS01YGyuJk0t_lEFYW1CPqO0nDilVXMiL6PtVuCloHvim3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-sm">
+<button class="bg-[#E50914] text-white py-2 rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-2 shadow-lg shadow-black/50">
+<span class="material-symbols-outlined text-sm" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            Watch Now
+                        </button>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/70 hover:text-[#E50914] transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-md text-body-md text-white truncate">The Silent Orbit</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-[#1F1F1F] text-white/60 px-2 py-0.5 rounded text-[10px] font-bold">4K</span>
+<span class="text-white/40 text-[12px] font-medium">2024 • Sci-Fi</span>
+</div>
+</div>
+</div>
+<!-- Movie Card 2 -->
+<div class="group relative flex flex-col gap-sm">
+<div class="aspect-[2/3] rounded-xl overflow-hidden glass-card relative cursor-pointer active:scale-[0.98] transition-all duration-300">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="dramatic film poster featuring a dark silhouette of a detective in a foggy London street with warm orange gaslight glowing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1vVbkNaqzMoDXEZD9ALvTpE3DtLY5j93_rifJv9G3tme9FRdmNcnUNZKlodvKHwvPRFic-hHSsOQg4MjOkDoevtUr-Pvh6Sp7thdnSE8GmG8O5EZy1vRFCyQtsewA-J6Ou8KVZP-otc5lYr7IEbc8-hw1AZFm-bPk74hmurwH5DSnuRLUBY0o7VZYq0N_SteMC_QyjrfClf43ZzB6IepqSH4tY-scU9XOXvJC8wDhoNeg65U5NGU7gykJC-BhocIIwa_Vk-Vl7OrD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-sm">
+<button class="bg-[#E50914] text-white py-2 rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            Watch Now
+                        </button>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/70 hover:text-[#E50914] transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-md text-body-md text-white truncate">Midnight Protocol</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-[#1F1F1F] text-white/60 px-2 py-0.5 rounded text-[10px] font-bold">HD</span>
+<span class="text-white/40 text-[12px] font-medium">2023 • Thriller</span>
+</div>
+</div>
+</div>
+<!-- Movie Card 3 -->
+<div class="group relative flex flex-col gap-sm">
+<div class="aspect-[2/3] rounded-xl overflow-hidden glass-card relative cursor-pointer active:scale-[0.98] transition-all duration-300">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="cinematic shot of a vibrant sunset over a modern architectural house with reflections on a swimming pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATfnbbvqON7Fu9vucPMZRqF2qdR5Mw9d4GLgsqqHaV8ChylZsACLw_WXGtMJo6dZEErAOD8IQOZxi7f7GMztfG_QycyJxBxnQJNQZq3xqQoEx6C8xKJbVOEVGxWK4GRMPrJrmJUA3s6gbuRaZZmHgbBaXV_lVG-JirmpF_cOE9rQdKFujl0CisOZhrQNEXH7Kl9Vb0Dgjv0msRUya7wvy_p62phC8ifeYiytg0E_cul1vrIbkMvwHUtb2XDfjJ7GZdD4HsfK07k-4s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-sm">
+<button class="bg-[#E50914] text-white py-2 rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            Watch Now
+                        </button>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/70 hover:text-[#E50914] transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-md text-body-md text-white truncate">A Summer's End</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-[#1F1F1F] text-white/60 px-2 py-0.5 rounded text-[10px] font-bold">4K</span>
+<span class="text-white/40 text-[12px] font-medium">2024 • Drama</span>
+</div>
+</div>
+</div>
+<!-- Movie Card 4 -->
+<div class="group relative flex flex-col gap-sm">
+<div class="aspect-[2/3] rounded-xl overflow-hidden glass-card relative cursor-pointer active:scale-[0.98] transition-all duration-300">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="macro photography of colorful ink swirls in water creating a dreamy abstract cosmic nebula effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwKdOTVO1feyUZyLTkVrL15Zee7YJMVtbs26xFapg2jl9rYZBcEGZiSd9QSvJajl57EURn4WA7Mhzbk3vczI57XJcg4fAVJbO2IOTHoYkiDGaZZ1G4_V9NpE4jp1AXDNn6e3K1DIGA6Cu5CoZSZ-U-hN0_-0b9veO8Q9aZBV8rEEsmXin-SlHwt-9gsD_dXd0rQ9TrffXugGxbB0PsU62rY-5nvjSCdze4ZH65PrGpX-U39wmBYMBh5_YChfeyIz6b7UBUN6tpRTgr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-sm">
+<button class="bg-[#E50914] text-white py-2 rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                            Watch Now
+                        </button>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/70 hover:text-[#E50914] transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="close">close</span>
+</button>
+</div>
+<div>
+<h3 class="font-headline-md text-body-md text-white truncate">Neural Dreams</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-[#1F1F1F] text-white/60 px-2 py-0.5 rounded text-[10px] font-bold">8K</span>
+<span class="text-white/40 text-[12px] font-medium">2024 • Documentary</span>
+</div>
+</div>
+</div>
+<!-- More cards could go here... -->
+</div>
+<!-- Optional Empty State (Commented out but implemented for structure) -->
+<!-- 
+        <div class="flex flex-col items-center justify-center py-xl text-center">
+            <div class="w-24 h-24 rounded-full bg-surface-container flex items-center justify-center mb-md text-white/20">
+                <span class="material-symbols-outlined text-5xl" data-icon="bookmark">bookmark</span>
+            </div>
+            <h2 class="font-headline-md text-headline-md text-white mb-xs">Your list is empty</h2>
+            <p class="font-body-md text-body-md text-white/50 max-w-xs mb-lg">Start adding movies and shows to your watchlist to keep track of what you want to see.</p>
+            <button class="bg-[#E50914] text-white px-xl py-3 rounded-full font-label-sm text-label-sm uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg shadow-[#E50914]/20">
+                Browse Movies
+            </button>
+        </div>
+        -->
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#0A0A0A]/90 backdrop-blur-2xl border-t border-white/5 shadow-[0_-8px_32px_rgba(0,0,0,0.5)] rounded-t-2xl">
+<button class="flex flex-col items-center justify-center text-white/40 hover:text-white/80 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-white/40 hover:text-white/80 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="movie">movie</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest">Movies</span>
+</button>
+<button class="flex flex-col items-center justify-center text-white/40 hover:text-white/80 active:scale-90 transition-all duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="tv">tv</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest">TV</span>
+</button>
+<!-- Active Tab: Watchlist -->
+<button class="flex flex-col items-center justify-center text-[#E50914] scale-110 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1 active-nav-icon" data-icon="bookmark" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest">Watchlist</span>
+</button>
+</nav>
+</body></html>
