@@ -6,7 +6,7 @@
 
 NotFlix is a premium, cross-platform streaming application clone designed to offer a cinematic, immersive browsing experience. Available natively on iOS and Android, as well as on [the Web](https://notflix-yu1n.onrender.com/). It leverages modern design aesthetics, real-time data from TMDB, and secure backend integration via Supabase.
 
-🌐 **Try the Web Version:** [https://www.notflix.pro.et/#/](https://www.notflix.pro.et/#/)](https://notflix-yu1n.onrender.com/)
+🌐 **Try the Web Version:** [https://www.notflix.pro.et/#/][https://www.notflix.pro.et/#/](https://notflix-yu1n.onrender.com/)
 
 ## 🚀 Key Features
 
