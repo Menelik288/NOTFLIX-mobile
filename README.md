@@ -47,6 +47,26 @@ NotFlix is a premium, cross-platform streaming application clone designed to off
 
 ---
 
+## 📸 Screenshots
+
+<img width="1080" height="2280" alt="telegram-cloud-document-4-5902115187393045125" src="https://github.com/user-attachments/assets/bc82a8f5-1d58-4fde-b663-a7a98525029b" />
+
+<img width="1080" height="2280" alt="telegram-cloud-document-4-5902115187393045126" src="https://github.com/user-attachments/assets/1f53402b-3564-467b-ab65-20172d053e78" />
+
+<img width="1080" height="2280" alt="telegram-cloud-document-4-5902115187393045127" src="https://github.com/user-attachments/assets/ea1541a6-d181-4208-b79c-42bce358c69e" />
+
+<img width="1080" height="2280" alt="telegram-cloud-document-4-5902115187393045128" src="https://github.com/user-attachments/assets/d1805e2c-0f24-4ac1-965b-4cdfc7f5235e" />
+
+<img width="1080" height="2280" alt="telegram-cloud-document-4-5902115187393045129" src="https://github.com/user-attachments/assets/8c64c34a-eb61-477d-8b63-fb06f1dc716f" />
+
+<img width="1080" height="2280" alt="telegram-cloud-document-4-5902115187393045130" src="https://github.com/user-attachments/assets/b9af203f-5132-4aca-8cb8-fd355de875b6" />
+
+<img width="1080" height="2280" alt="telegram-cloud-document-4-5902115187393045131" src="https://github.com/user-attachments/assets/c6e859a3-d3c6-4581-8647-227b5b344120" />
+
+<img width="1080" height="2280" alt="telegram-cloud-document-4-5902115187393045132" src="https://github.com/user-attachments/assets/6bd83a2b-20a4-41f8-910a-0fbe63b4d95c" />
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Install Dependencies
